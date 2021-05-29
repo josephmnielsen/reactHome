@@ -3,7 +3,7 @@ const { Feedback } = require('../models')
 
 router.get('/feedback', (req, res) => {
   Feedback.find({})
-    .then(gifs => res.json(gifs))
+    .then(feedback => res.json(feedback))
     .catch(err => console.log(err))
 })
 
