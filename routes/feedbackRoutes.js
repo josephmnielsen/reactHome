@@ -2,7 +2,7 @@ const router = require('express').Router()
 const { Feedback } = require('../models')
 
 router.get('/feedback', (req, res) => {
-  Feedback.find({})
+  Feedback.find()
     .then(feedback => res.json(feedback))
     .catch(err => console.log(err))
 })
